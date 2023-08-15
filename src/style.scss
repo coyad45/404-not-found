@@ -1,0 +1,120 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 360px;
+    height: 949px;
+    margin: 0 10px;
+}
+
+
+main{
+    display: grid;
+    grid-template-rows: 50px 290px 1fr 1fr;
+    section{
+        margin: 50px 0;
+    }
+    .main--title{
+        
+        .title{
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+    }
+    
+    .main--imagen{
+        margin: 30px 0px;
+        place-self: center;
+        img{
+            width: 280px;
+            
+            
+        }
+    }
+    .contenedor{
+        .main--sub{
+            font-family: 'Space Mono', monospace;
+            
+            h1{
+                
+                font-weight: 700;
+                font-size: 48px;
+                
+            }
+        }
+            
+    
+        .main--parrafo
+        {
+            margin-top: 20px;
+            p{
+                font-family: 'Space Mono', monospace;
+                font-weight: 400;
+                font-size: 18px;
+                color:rgba(79, 79, 79, 1) ;
+            }
+        }
+        .button{
+            font-family: 'Space Mono', monospace;
+            width: 216px;
+            height: 68px;
+            background-color: rgba(51, 51, 51, 1);
+            color: white;
+            text-decoration: none;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+@media (min-width: 960px){   
+   
+    
+    main{
+        width: 1040px;
+        height: 700px;
+        display: grid;
+        grid-template-areas: "nava nava" 
+        "left right";
+        grid-auto-flow: row;
+        grid-template-rows: 60px 1fr;
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+        gap: 0 70px;
+       
+        .title{
+            grid-area: nava;
+            
+        }
+       
+        .main--imagen
+        {
+            grid-area: left;
+            place-self: center;
+            margin-left: 60px;
+            img{
+                width: 500px;
+                height: 450px;
+            }
+            
+
+        }
+        .contenedor{
+            grid-area: right;
+            place-self: center;
+            .main--parrafo{
+                p{
+                    font-size: 24px;
+                }
+            }
+        }
+        
+    }
+   
+}
